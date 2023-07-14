@@ -1,6 +1,6 @@
 version: '3'
 networks:
-  toycart:
+  mango:
 services:
   mango:
     image: mongo:v1
