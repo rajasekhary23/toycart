@@ -4,7 +4,7 @@ networks:
 services:
   mongodb:
     image: mongo:v1
-    container_name: mongodb
+    container_name: mongodb_test
     # volumes:
     #   -type: volume
     #   source: mongodb
