@@ -2,7 +2,7 @@ version: '3'
 networks:
   toycart:
 services:
-  mongo:
+  mongodb:
     image: mongodb:v1
     cotainer_name: mongodb
     # volumes:
