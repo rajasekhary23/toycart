@@ -4,7 +4,7 @@ networks:
 services:
   mango:
     image: mongo:v1
-    container_name: mongodb_test
+    container_name: mongodb_test123
     # volumes:
     #   -type: volume
     #   source: mongodb
