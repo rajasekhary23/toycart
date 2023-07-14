@@ -4,7 +4,13 @@ networks:
 services:
   mango:
     image: mongo:v1
+    container_name: mongodb_test
+  raja:
+    image: mongo:v1
     container_name: mongodb_test123
+  sai:
+    image: mongo:v1
+    container_name: mongodb_demo
     # volumes:
     #   -type: volume
     #   source: mongodb
