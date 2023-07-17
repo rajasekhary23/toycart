@@ -1,4 +1,4 @@
-FROM almalinux:8
+FROM alpine
 RUN yum update -y
 RUN yum install nginx -y
 RUN addgroup -s nginx1 && useradd -s nginx1 nginx1
