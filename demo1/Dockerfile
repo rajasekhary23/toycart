@@ -2,8 +2,8 @@ FROM nginx
 RUN addgroup --system raja && adduser --system raja
 RUN echo "Hello" > /tmp/hello.txt
 RUN chown -R raja:raja /tmp
-CMD [ "nginx" , "-g" , "daemon off;" ]
 USER raja
+CMD [ "nginx" , "-g" , "daemon off;" ]
 
 
 # FROM busybox:stable
