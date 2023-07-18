@@ -1,9 +1,9 @@
 FROM nginx
-RUN addgroup -S nginx1 && adduser -S nginx1 nginx1
+RUN addgroup --system raja && adduser --system raja raja
 RUN echo "Hello" > /tmp/hello.txt
-RUN chown -R nginx1:nginx1 /tmp
+RUN chown -R raja:raja /tmp
 CMD [ "nginx" , "-g" , "daemon off;" ]
-USER nginx1
+USER raja
 
 
 # FROM busybox:stable
