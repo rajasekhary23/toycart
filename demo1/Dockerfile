@@ -4,8 +4,7 @@ RUN apk update \
      && apk add nginx
 RUN adduser -S -D -g 'myuser' myuser \
      && mkdir /myuser
-ADD nginx.conf /etc/nginx/nginx.conf.orig \
-     && index.html /myuser/
+
 CMD [ "nginx", "start" ]
 # CMD ["sleep","2000"]
 
