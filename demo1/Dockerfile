@@ -1,8 +1,14 @@
 FROM alpine:latest
-RUN addgroup -S nginx1 && adduser -S nginx1 nginx1
-# RUN apt-get update \
-#     && apt-get nginx
-CMD ["/bin/sh"]
+# RUN addgroup -S nginx1 && adduser -S nginx1 nginx1
+RUN apk update \
+     && apk add nginx -y
+RUN adduser -S -D -g 'myuser' myuser \
+     && mkdir /myuser
+RUN chown -R myuser:myuser /var/lib/nginx \
+     && chown -R myuser:myuser /myuser
+ADD nginx.conf /etc/nginx/nginx.conf.orig \
+     && index.html /myuser/
+CMD [ "nginx", "start" ]
 # CMD ["sleep","2000"]
 
 
