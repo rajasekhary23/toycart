@@ -1,7 +1,7 @@
 FROM alpine:latest
 # RUN addgroup -S nginx1 && adduser -S nginx1 nginx1
 RUN apk update \
-     && apk add nginx -y
+     && apk add nginx
 RUN adduser -S -D -g 'myuser' myuser \
      && mkdir /myuser
 RUN chown -R myuser:myuser /var/lib/nginx \
