@@ -4,8 +4,6 @@ RUN apk update \
      && apk add nginx
 RUN adduser -S -D -g 'myuser' myuser \
      && mkdir /myuser
-RUN chown -R myuser:myuser /var/lib/nginx \
-     && chown -R myuser:myuser /myuser
 ADD nginx.conf /etc/nginx/nginx.conf.orig \
      && index.html /myuser/
 CMD [ "nginx", "start" ]
