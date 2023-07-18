@@ -1,5 +1,5 @@
 FROM alpine:latest
-RUN addgroup -S nginx1 && useradd -S nginx1 nginx1
+RUN addgroup -S nginx1 && adduser -S nginx1 nginx1
 # RUN apt-get update \
 #     && apt-get nginx
 # CMD ["/bin/sh"]
