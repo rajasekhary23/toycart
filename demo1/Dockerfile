@@ -4,8 +4,8 @@ RUN apk update \
      && apk add nginx
 RUN adduser -S -D -g 'myuser' myuser \
      && mkdir /myuser
-USER myuser
 CMD [ "nginx" , "-g" , "daemon off;" ]
+USER myuser
 # CMD ["sleep","2000"]
 
 
