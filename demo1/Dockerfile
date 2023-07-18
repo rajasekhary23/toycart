@@ -1,6 +1,6 @@
 FROM alpine:latest
-RUN apt-get update \
-    && apt-get nginx
+# RUN apt-get update \
+#     && apt-get nginx
 CMD ["/bin/sh"]
 
 
