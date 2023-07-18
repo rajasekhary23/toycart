@@ -2,8 +2,8 @@ FROM alpine:latest
 RUN addgroup -S nginx1 && adduser -S nginx1 nginx1
 # RUN apt-get update \
 #     && apt-get nginx
-# CMD ["/bin/sh"]
-CMD ["sleep","2000"]
+CMD ["/bin/sh"]
+# CMD ["sleep","2000"]
 
 
 # FROM nginx
